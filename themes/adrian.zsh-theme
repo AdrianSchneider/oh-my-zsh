@@ -17,7 +17,7 @@ function _git_branch() {
             branch=' '
         fi
 
-        echo -n "%K{$ansi}"%F{256}$branch"%f%k "
+        echo -n "%K{$ansi}"%F{0}$branch"%f%k "
     fi
 }
 
