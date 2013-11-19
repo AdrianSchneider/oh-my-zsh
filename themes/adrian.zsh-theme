@@ -21,4 +21,10 @@ function _git_branch() {
     fi
 }
 
-PROMPT='`_git_branch`%F{038}%~ %f%{$reset_color%}'
+function _qissues() {
+    if [ -f "./.qissues" ]; then
+        echo "%K{235}i%f%k "
+    fi
+}
+
+PROMPT='`_git_branch``_qissues`%F{038}%~ %f%{$reset_color%}'
