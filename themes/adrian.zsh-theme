@@ -1,4 +1,4 @@
-function _git_branch() {
+function _get_git_branch__() {
     local git_status="`git status -unormal 2>&1`"
     if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
         if [[ "$git_status" =~ nothing\ to\ commit ]]; then
@@ -27,4 +27,4 @@ function _qissues() {
     fi
 }
 
-PROMPT='`_git_branch``_qissues`%F{038}%~ %f%{$reset_color%}'
+PROMPT='`_get_git_branch__``_qissues`%F{038}%~ %f%{$reset_color%}'
